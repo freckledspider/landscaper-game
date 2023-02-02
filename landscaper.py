@@ -56,6 +56,9 @@ def quit_game():
 # Game choices and functions
 def game():
     while True:
+        if game_state["money"] >= 1000:
+            print("\nYou have reached $1000 and won the game.")
+            exit()
         display_user_choices()
         user_choice = input("\nEnter your choice: ")
         if user_choice == "1":
